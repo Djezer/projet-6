@@ -1,0 +1,668 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/** end reset css**/
+body {
+    max-width: 1140px;
+    margin: auto;
+    font-family: 'Work Sans';
+    font-size: 14px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0
+}
+
+a {
+    text-decoration: none;
+    /* Supprime le soulignement par défaut */
+    color: black;
+    /* Définit la couleur du texte */
+}
+
+section {
+    margin: 50px 0
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Syne';
+    font-size: 22px;
+    font-weight: 800;
+    color: #B1663C
+}
+
+h1>span {
+    font-family: 'Work Sans';
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    ;
+}
+
+h2 {
+    font-family: 'Syne';
+    font-weight: 700;
+    font-size: 30px;
+    color: #1D6154
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+nav li {
+    padding: 0 10px;
+    font-size: 1.2em;
+}
+
+li:hover {
+    color: #B1663C;
+}
+
+#introduction {
+    display: flex;
+    align-items: center;
+}
+
+#introduction figure {
+    flex: 1
+}
+
+#introduction img {
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+
+#introduction article {
+    flex: 1
+}
+
+#introduction h2 {
+    margin-bottom: 1em;
+}
+
+#introduction p {
+    margin-bottom: 0.5em;
+}
+
+#portfolio h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+#contact {
+    width: 50%;
+    margin: auto;
+}
+
+#contact>* {
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+}
+
+#contact p a {
+    text-decoration: none;
+    /* Supprime le soulignement par défaut */
+    border-bottom: 1px solid #1D6154;
+    /* Ajoute une bordure inférieure */
+    color: #1D6154;
+    /* Couleur du lien */
+}
+
+#contact form {
+    text-align: left;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact input {
+    height: 50px;
+    font-size: 1.2em;
+    border: none;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#contact label {
+    margin: 2em 0 1em 0;
+}
+
+#contact textarea {
+    border: none;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="submit"] {
+    font-family: 'Syne';
+    font-weight: 700;
+    color: white;
+    background-color: #1D6154;
+    margin: 2em auto;
+    width: 180px;
+    text-align: center;
+    border-radius: 60px;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2em
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.filters button {
+    height: 37px;
+    border-radius: 60px;
+    border: 1px solid #1D6154;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    min-width: 100px;
+    font-weight: 700;
+    padding: 15px;
+    color: #1D6154;
+    transition: background-color 0.3s;
+    /* Ajout d'une transition pour un effet fluide */
+}
+
+.filters button:hover {
+    background-color: #1D6154;
+    /* Changement de couleur de fond au survol */
+    color: #ffffff;
+    /* Changement de couleur du texte au survol */
+}
+
+.filters button.selected {
+    background-color: #1D6154;
+    /* Couleur verte pour le bouton sélectionné */
+    color: #ffffff;
+    /* Couleur du texte pour le bouton sélectionné */
+}
+
+.filters button.selected:hover {
+    background-color: #0f443d;
+    /* Changement de couleur de fond au survol pour le bouton sélectionné */
+}
+
+.admin_banner {
+    right: 0;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: black;
+}
+
+.admin_modifer {
+    display: flex;
+    -moz-column-gap: 5px;
+    column-gap: 5px;
+    color: white;
+    /* Changement de la couleur du texte */
+}
+
+.admin_modifer p {
+    color: white;
+    /* Changement de la couleur du texte */
+}
+
+#portfolio {
+    position: relative;
+}
+
+/* Style pour la modal 1 (initialement cachée) */
+#modal1 {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 30%;
+}
+
+/* Style pour la modal 2 (initialement cachée) */
+#modal2 {
+    position: absolute;
+    top: 10px;
+    right: 30%;
+}
+
+/* Style général des conteneurs de modal */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Style général de la modal */
+.modal {
+    background-color: white;
+    padding: 15px;
+    max-width: 600px;
+    width: calc(100% - 60px);
+    /* Largeur maximale de la modal */
+    height: 600px;
+    padding: 0 50px;
+    /* Hauteur de la modal */
+    overflow: auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Style du bouton de fermeture de la modal */
+#close-modal1 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: #000;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Style du titre de la modal */
+.modal h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    color: #000;
+}
+
+/* Contenu de la modal */
+.modal-content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* Style des images dans la modal */
+.modal-content figure img {
+    width: 95px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Style du bouton "Ajouter une photo" */
+#open-modal2 {
+    position: absolute;
+    bottom: 30px;
+    /* Positionner moins bas depuis le bas de la modal */
+    left: 50%;
+    transform: translateX(-50%);
+    height: 45px;
+    /* Hauteur du bouton */
+    min-width: 250px;
+    /* Largeur minimale pour un bouton plus long */
+    border-radius: 30px;
+    /* Rayon de bordure pour un bouton arrondi */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0 20px;
+    /* Padding horizontal pour étirer le bouton */
+    color: white;
+    /* Couleur du texte en blanc */
+    background-color: #1D6154;
+    /* Couleur de fond verte */
+    border: none;
+    /* Retirer les bordures par défaut */
+}
+
+/* Effet de survol du bouton "Ajouter une photo" */
+#open-modal2:hover {
+    background-color: #1B5E50;
+    /* Légère variation de couleur au survol */
+}
+
+/* Style spécifique de la modal 2 */
+#modal-container-2 .modal {
+    background-color: white;
+    padding: 15px;
+    max-width: 600px;
+    /* Largeur maximale de la modal */
+    width: calc(100% - 60px);
+    /* Largeur de la modal, moins la marge */
+    height: 600px;
+    /* Hauteur de la modal */
+    overflow: auto;
+    /* Ajoutez le défilement si nécessaire */
+    position: relative;
+    /* Contexte de positionnement pour les éléments enfants */
+}
+
+/* Style du bouton de validation dans la modal 2 */
+.modal-projet-form input[type="submit"] {
+    position: absolute;
+    /* Positionner le bouton absolument */
+    bottom: 30px;
+    /* Distance du bas de la modal */
+    left: 50%;
+    /* Centrer horizontalement */
+    transform: translateX(-50%);
+    /* Centrer parfaitement avec translation */
+    height: 45px;
+    /* Hauteur du bouton */
+    min-width: 250px;
+    /* Largeur minimale pour le bouton */
+    border-radius: 30px;
+    /* Rayon de bordure pour un bouton arrondi */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    /* Taille du texte */
+    font-weight: 700;
+    /* Poids du texte */
+    padding: 0 20px;
+    /* Padding horizontal pour étirer le bouton */
+    color: white;
+    /* Couleur du texte en blanc */
+    background-color: #a7a7a7;
+    /* Couleur de fond du bouton */
+    border: none;
+    /* Retirer les bordures par défaut */
+    cursor: pointer;
+    /* Curseur pointer pour le bouton */
+}
+
+/* Conteneur d'image et bouton de suppression */
+.work-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style du bouton de suppression d'image */
+.delete-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    /* Alignement à droite */
+    background-color: #000;
+    /* Fond noir pour le bouton */
+    border: none;
+    color: #fff;
+    /* Couleur de l'icône en blanc */
+    font-size: 16px;
+    /* Taille réduite de l'icône */
+    cursor: pointer;
+    padding: 4px;
+    /* Padding réduit pour une apparence plus petite */
+}
+
+/* Effet de survol du bouton de suppression */
+.delete-button:hover {
+    background-color: #333;
+    /* Couleur de fond légèrement plus claire au survol */
+}
+
+/* Style du bouton de retour à la modal 1 */
+.back-to-modal1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: transparent;
+    border: none;
+    color: #000;
+    /* Couleur de la flèche */
+    font-size: 24px;
+}
+
+/* Effet de survol du bouton de retour à la modal 1 */
+.back-to-modal1:hover {
+    cursor: pointer;
+}
+
+/* Style pour le conteneur de prévisualisation d'image dans la modal 2 */
+#photo-preview {
+    width: 80%;
+    /* Étendre la largeur à 80% de la largeur de la modal */
+    max-width: 400px;
+    /* Largeur maximale pour éviter que la zone devienne trop large */
+    height: 250px;
+    /* Hauteur fixe pour la prévisualisation */
+    background-color: #e0f7fa;
+    /* Bleu ciel */
+    display: flex;
+    flex-direction: column;
+    /* Organiser les éléments verticalement */
+    align-items: center;
+    /* Centrer horizontalement */
+    justify-content: center;
+    /* Centrer verticalement */
+    border: 2px solid #b2ebf2;
+    /* Bordure légèrement plus foncée */
+    border-radius: 8px;
+    /* Coins arrondis pour le conteneur */
+    margin: 0 auto 20px auto;
+    /* Centrer horizontalement avec une marge inférieure */
+    position: relative;
+    /* Positionnement pour l'icône */
+}
+
+.preview-icon {
+    font-size: 60px;
+    /* Taille de l'icône */
+    color: #9ba1a1;
+    /* Gris pour l'icône sur fond clair */
+    margin-bottom: 10px;
+    /* Espacement sous l'icône */
+}
+
+#add-photo-btn {
+    width: 200px;
+    /* Largeur réduite pour le bouton */
+    height: 35px;
+    /* Hauteur réduite pour le bouton */
+    border-radius: 20px;
+    /* Bordure arrondie comme le bouton Valider */
+    background-color: #e0e0e0;
+    /* Gris clair pour le fond du bouton */
+    color: #00796b;
+    /* Texte en vert */
+    font-size: 16px;
+    /* Taille du texte */
+    font-weight: 700;
+    /* Poids du texte */
+    border: none;
+    /* Retirer les bordures par défaut */
+    cursor: pointer;
+    /* Curseur pointer pour le bouton */
+    margin: 10px 0;
+    /* Espacement au-dessus et en dessous du bouton */
+    display: flex;
+    /* Utiliser flex pour centrer le texte */
+    align-items: center;
+    /* Alignement vertical du texte */
+    justify-content: center;
+    /* Alignement horizontal du texte */
+}
+
+/* Effet de survol du bouton "+ Ajouter photo" */
+#add-photo-btn:hover {
+    background-color: #d0d0d0;
+    /* Gris légèrement plus foncé au survol */
+    /* Changement de couleur au survol */
+    color: #004d40;
+    /* Changer la couleur du texte en vert foncé au survol */
+}
+
+/* Style pour le texte d'information */
+.file-info {
+    font-size: 14px;
+    /* Taille du texte */
+    color: #757575;
+    /* Couleur du texte d'information */
+    text-align: center;
+    /* Centrer le texte */
+}
