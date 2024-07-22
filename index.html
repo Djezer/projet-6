@@ -50,10 +50,11 @@
 		</section>
 		<section id="portfolio">
 			<h2>Mes Projets</h2>
-			<a id="modal1" href="#">Modifier</a>
+			<a href="#">
+				<img id="modal1" src="../FrontEnd/assets/icons/modifier.jpg" alt="Modifier">
+			</a>
 			<div class="filters"></div>
-			<div class="gallery">
-			</div>
+			<div class="gallery"></div>
 		</section>
 		<section id="contact">
 			<h2>Contact</h2>
@@ -82,6 +83,7 @@
 	</aside>
 	<aside class="modal-container" id="modal-container-2">
 		<div class="modal modal-2">
+			<button type="button" id="close-modal2">&times;</button> <!-- Bouton de fermeture de la modal 2 -->
 			<button class="back-to-modal1"><i class="fa-solid fa-arrow-left"></i></button>
 			<h2>Ajout photo</h2>
 			<form id="modal-form">
@@ -105,6 +107,7 @@
 							<option value="3">Hôtels & restaurants</option>
 						</select>
 					</div>
+					<hr>
 					<input type="submit" value="Valider" id="submit" disabled>
 				</div>
 			</form>

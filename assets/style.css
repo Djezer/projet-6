@@ -407,24 +407,34 @@ footer nav ul {
     padding: 15px;
     max-width: 600px;
     width: calc(100% - 60px);
-    /* Largeur maximale de la modal */
     height: 600px;
     padding: 0 50px;
-    /* Hauteur de la modal */
     overflow: auto;
     position: relative;
     box-sizing: border-box;
+    border-radius: 12px;
 }
 
 /* Style du bouton de fermeture de la modal */
-#close-modal1 {
+#close-modal2 {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 20px;
     background: transparent;
     border: none;
     color: #000;
-    font-size: 24px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#close-modal1 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #000;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -455,34 +465,25 @@ footer nav ul {
 #open-modal2 {
     position: absolute;
     bottom: 30px;
-    /* Positionner moins bas depuis le bas de la modal */
     left: 50%;
     transform: translateX(-50%);
     height: 45px;
-    /* Hauteur du bouton */
     min-width: 250px;
-    /* Largeur minimale pour un bouton plus long */
     border-radius: 30px;
-    /* Rayon de bordure pour un bouton arrondi */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 18px;
     font-weight: 700;
     padding: 0 20px;
-    /* Padding horizontal pour étirer le bouton */
     color: white;
-    /* Couleur du texte en blanc */
     background-color: #1D6154;
-    /* Couleur de fond verte */
     border: none;
-    /* Retirer les bordures par défaut */
 }
 
 /* Effet de survol du bouton "Ajouter une photo" */
 #open-modal2:hover {
     background-color: #1B5E50;
-    /* Légère variation de couleur au survol */
 }
 
 /* Style spécifique de la modal 2 */
@@ -490,50 +491,73 @@ footer nav ul {
     background-color: white;
     padding: 15px;
     max-width: 600px;
-    /* Largeur maximale de la modal */
     width: calc(100% - 60px);
-    /* Largeur de la modal, moins la marge */
-    height: 600px;
-    /* Hauteur de la modal */
+    height: 700px;
     overflow: auto;
-    /* Ajoutez le défilement si nécessaire */
     position: relative;
-    /* Contexte de positionnement pour les éléments enfants */
+}
+
+/* Style général des formulaires dans les modals */
+.modal-projet-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    width: calc(100% - 60px);
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* Style des groupes de champs dans le formulaire */
+.modal-projet-form .form-group-title,
+.modal-projet-form .form-group-id {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Style des labels dans le formulaire */
+.modal-projet-form label {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Style des champs de texte et de sélection dans le formulaire */
+.modal-projet-form input[type="text"],
+.modal-projet-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    /* Retirer le contour */
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Ajouter une ombre */
+    box-sizing: border-box;
 }
 
 /* Style du bouton de validation dans la modal 2 */
 .modal-projet-form input[type="submit"] {
-    position: absolute;
-    /* Positionner le bouton absolument */
-    bottom: 30px;
-    /* Distance du bas de la modal */
-    left: 50%;
-    /* Centrer horizontalement */
-    transform: translateX(-50%);
-    /* Centrer parfaitement avec translation */
     height: 45px;
-    /* Hauteur du bouton */
     min-width: 250px;
-    /* Largeur minimale pour le bouton */
     border-radius: 30px;
-    /* Rayon de bordure pour un bouton arrondi */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    /* Taille du texte */
     font-weight: 700;
-    /* Poids du texte */
     padding: 0 20px;
-    /* Padding horizontal pour étirer le bouton */
     color: white;
-    /* Couleur du texte en blanc */
     background-color: #a7a7a7;
-    /* Couleur de fond du bouton */
     border: none;
-    /* Retirer les bordures par défaut */
     cursor: pointer;
-    /* Curseur pointer pour le bouton */
+    margin-top: 20px;
+}
+
+/* Effet de survol du bouton de soumission */
+.modal-projet-form input[type="submit"]:hover {
+    background-color: #9a9a9a;
 }
 
 /* Conteneur d'image et bouton de suppression */
@@ -547,23 +571,17 @@ footer nav ul {
     position: absolute;
     top: 5px;
     right: 5px;
-    /* Alignement à droite */
     background-color: #000;
-    /* Fond noir pour le bouton */
     border: none;
     color: #fff;
-    /* Couleur de l'icône en blanc */
     font-size: 16px;
-    /* Taille réduite de l'icône */
     cursor: pointer;
     padding: 4px;
-    /* Padding réduit pour une apparence plus petite */
 }
 
 /* Effet de survol du bouton de suppression */
 .delete-button:hover {
     background-color: #333;
-    /* Couleur de fond légèrement plus claire au survol */
 }
 
 /* Style du bouton de retour à la modal 1 */
@@ -574,7 +592,6 @@ footer nav ul {
     background: transparent;
     border: none;
     color: #000;
-    /* Couleur de la flèche */
     font-size: 24px;
 }
 
@@ -586,83 +603,56 @@ footer nav ul {
 /* Style pour le conteneur de prévisualisation d'image dans la modal 2 */
 #photo-preview {
     width: 80%;
-    /* Étendre la largeur à 80% de la largeur de la modal */
-    max-width: 400px;
-    /* Largeur maximale pour éviter que la zone devienne trop large */
-    height: 250px;
-    /* Hauteur fixe pour la prévisualisation */
+    max-width: 450px;
+    height: 190px;
     background-color: #e0f7fa;
-    /* Bleu ciel */
     display: flex;
     flex-direction: column;
-    /* Organiser les éléments verticalement */
     align-items: center;
-    /* Centrer horizontalement */
     justify-content: center;
-    /* Centrer verticalement */
-    border: 2px solid #b2ebf2;
-    /* Bordure légèrement plus foncée */
+    border: 2px solid #d6e7f0;
     border-radius: 8px;
-    /* Coins arrondis pour le conteneur */
     margin: 0 auto 20px auto;
-    /* Centrer horizontalement avec une marge inférieure */
     position: relative;
-    /* Positionnement pour l'icône */
 }
 
 .preview-icon {
     font-size: 60px;
-    /* Taille de l'icône */
     color: #9ba1a1;
-    /* Gris pour l'icône sur fond clair */
     margin-bottom: 10px;
-    /* Espacement sous l'icône */
 }
 
 #add-photo-btn {
     width: 200px;
-    /* Largeur réduite pour le bouton */
     height: 35px;
-    /* Hauteur réduite pour le bouton */
     border-radius: 20px;
-    /* Bordure arrondie comme le bouton Valider */
     background-color: #e0e0e0;
-    /* Gris clair pour le fond du bouton */
     color: #00796b;
-    /* Texte en vert */
     font-size: 16px;
-    /* Taille du texte */
     font-weight: 700;
-    /* Poids du texte */
     border: none;
-    /* Retirer les bordures par défaut */
     cursor: pointer;
-    /* Curseur pointer pour le bouton */
     margin: 10px 0;
-    /* Espacement au-dessus et en dessous du bouton */
     display: flex;
-    /* Utiliser flex pour centrer le texte */
     align-items: center;
-    /* Alignement vertical du texte */
     justify-content: center;
-    /* Alignement horizontal du texte */
 }
 
 /* Effet de survol du bouton "+ Ajouter photo" */
 #add-photo-btn:hover {
     background-color: #d0d0d0;
-    /* Gris légèrement plus foncé au survol */
-    /* Changement de couleur au survol */
     color: #004d40;
-    /* Changer la couleur du texte en vert foncé au survol */
 }
 
 /* Style pour le texte d'information */
 .file-info {
     font-size: 14px;
-    /* Taille du texte */
     color: #757575;
-    /* Couleur du texte d'information */
     text-align: center;
-    /* Centrer le texte */
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #08060654;
+    margin: 20px 0;
 }

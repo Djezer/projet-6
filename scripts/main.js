@@ -13,7 +13,6 @@ const token = sessionStorage.getItem('token');
 let works = [];
 let categories = [];
 
-
 const getWorks = async () => {
     const response = await fetch('http://localhost:5678/api/works');
     const data = await response.json();
@@ -152,54 +151,3 @@ if (token !== null) {
         location.reload();
     });
 }
-
-// Gestion de la prévisualisation de la photo
-addPhotoBtn.addEventListener('click', function () {
-    photoInput.click(); // Simule un clic sur l'élément de fichier caché
-});
-
-photoInput.addEventListener('change', function (event) {
-    const file = event.target.files[0];
-
-    if (file) {
-        const reader = new FileReader();
-
-        reader.onload = function (e) {
-            // Remplacer le contenu de la zone de prévisualisation par l'image sélectionnée
-            photoPreview.innerHTML = `<img src="${e.target.result}" alt="Image preview" style="max-width: 100%; max-height: 100%;">`;
-            previewIcon.style.display = 'none'; // Masquer l'icône de prévisualisation
-        };
-
-        reader.readAsDataURL(file); // Lire le fichier comme une URL de données
-    } else {
-        // Si aucun fichier n'est sélectionné, réinitialiser la prévisualisation
-        photoPreview.innerHTML = `
-                <i class="fa-solid fa-image preview-icon"></i>
-                <button type="button" id="add-photo-btn">+ Ajouter photo</button>
-                <p class="file-info">jpg, png : 4 Mo max</p>
-            `;
-    }
-});
-
-// Gestion de l'ajout d'une photo
-formAddPhoto.addEventListener('submit', async function (e) {
-    e.preventDefault();
-    const data = new FormData(formAddPhoto);
-
-    const response = await fetch('http://localhost:5678/api/works', {
-        method: 'POST',
-        headers: {
-            'Authorization': `Bearer ${token}`,
-        },
-        body: data,
-    });
-
-    if (response.ok) {
-        updateUI();
-        formAddPhoto.reset();
-        document.querySelector('#modal-container-1').style.display = 'flex';
-        document.querySelector('#modal-container-2').style.display = 'none';
-    }
-});
-
-
