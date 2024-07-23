@@ -605,12 +605,12 @@ footer nav ul {
     width: 80%;
     max-width: 450px;
     height: 190px;
-    background-color: #e0f7fa;
+    background-color: #E8F1F6;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid #d6e7f0;
+    border: 2px solid #E8F1F6;
     border-radius: 8px;
     margin: 0 auto 20px auto;
     position: relative;
@@ -627,7 +627,7 @@ footer nav ul {
     height: 35px;
     border-radius: 20px;
     background-color: #e0e0e0;
-    color: #00796b;
+    color: #306685;
     font-size: 16px;
     font-weight: 700;
     border: none;
@@ -641,7 +641,7 @@ footer nav ul {
 /* Effet de survol du bouton "+ Ajouter photo" */
 #add-photo-btn:hover {
     background-color: #d0d0d0;
-    color: #004d40;
+    color: #306685;
 }
 
 /* Style pour le texte d'information */
