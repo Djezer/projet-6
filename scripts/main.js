@@ -114,7 +114,7 @@ const filterWorksByCategory = (categoryId) => {
 };
 
 // Fonction pour créer un bouton de catégorie
-const createCategory = (category) => {
+const createCategory = (category, isDefault = false) => {
     const button = document.createElement('button');
     button.textContent = category.name; // Nom de la catégorie sur le bouton
 
@@ -131,11 +131,16 @@ const createCategory = (category) => {
     });
 
     filters.appendChild(button); // Ajout du bouton aux filtres
+
+    if (isDefault) {
+        button.classList.add('selected'); // Ajouter la classe 'selected' au bouton par défaut
+        filterWorksByCategory(category.id); // Afficher toutes les œuvres par défaut
+    }
 };
 
 // Fonction pour créer les boutons de catégories
 const createCategories = (data) => {
-    createCategory({ id: 0, name: 'Tous' }); // Ajout du bouton pour toutes les catégories
+    createCategory({ id: 0, name: 'Tous' }, true); // Ajout du bouton pour toutes les catégories et le sélectionner par défaut
     data.forEach(category => {
         createCategory(category); // Création des boutons pour chaque catégorie
     });

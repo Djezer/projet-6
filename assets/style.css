@@ -322,7 +322,9 @@ footer nav ul {
     font-weight: 700;
     padding: 15px;
     color: #1D6154;
+    background-color: white;
     transition: background-color 0.3s;
+    font-family: 'Syne', sans-serif;
     /* Ajout d'une transition pour un effet fluide */
 }
 
@@ -413,6 +415,7 @@ footer nav ul {
     position: relative;
     box-sizing: border-box;
     border-radius: 12px;
+    font-family: 'Syne', sans-serif;
 }
 
 /* Style du bouton de fermeture de la modal */
@@ -445,6 +448,7 @@ footer nav ul {
     margin-top: 30px;
     margin-bottom: 60px;
     color: #000;
+    font-family: 'Syne', sans-serif;
 }
 
 /* Contenu de la modal */
@@ -479,6 +483,7 @@ footer nav ul {
     color: white;
     background-color: #1D6154;
     border: none;
+    font-family: 'Syne', sans-serif;
 }
 
 /* Effet de survol du bouton "Ajouter une photo" */
@@ -495,6 +500,7 @@ footer nav ul {
     height: 700px;
     overflow: auto;
     position: relative;
+    font-family: 'Syne', sans-serif;
 }
 
 /* Style général des formulaires dans les modals */
@@ -507,6 +513,7 @@ footer nav ul {
     margin: 0 auto;
     padding: 15px;
     box-sizing: border-box;
+    font-family: 'Syne', sans-serif;
 }
 
 /* Style des groupes de champs dans le formulaire */
@@ -535,6 +542,7 @@ footer nav ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* Ajouter une ombre */
     box-sizing: border-box;
+    font-family: 'Syne', sans-serif;
 }
 
 /* Style du bouton de validation dans la modal 2 */
@@ -553,6 +561,7 @@ footer nav ul {
     border: none;
     cursor: pointer;
     margin-top: 20px;
+    font-family: 'Syne', sans-serif;
 }
 
 /* Effet de survol du bouton de soumission */
@@ -593,6 +602,7 @@ footer nav ul {
     border: none;
     color: #000;
     font-size: 24px;
+    font-family: 'Syne', sans-serif;
 }
 
 /* Effet de survol du bouton de retour à la modal 1 */
@@ -636,6 +646,7 @@ footer nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Syne', sans-serif;
 }
 
 /* Effet de survol du bouton "+ Ajouter photo" */
@@ -655,4 +666,9 @@ hr {
     border: 0;
     border-top: 1px solid #08060654;
     margin: 20px 0;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 10px;
 }
